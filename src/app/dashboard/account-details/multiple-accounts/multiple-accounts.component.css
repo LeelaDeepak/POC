@@ -11,8 +11,8 @@
      border-radius: 10px;
      background: linear-gradient(0deg, #DA22FF 0%, #9733EE 100%);
      padding: 10px;
-     opacity: 0.5;
      cursor: pointer;
+     opacity: 1;
  }
  .loanAccount{
      width: 300px;
@@ -49,10 +49,6 @@
      padding: 10px;
      opacity: 0.5;
      cursor: pointer;
- }
- .savingsAccount:hover,.loanAccount:hover,.creditCard:hover,.overDraftAccount:hover{
-     cursor: pointer;
-     opacity:1;
  }
  .circleIcon{
      margin: 8px 0px 0px 8px;

@@ -1,6 +1,6 @@
 <div class="container-fluid bg-container">
     <div class="d-flex flex-row col-lg-12 col-md-12 col-sm-12">
-      <div class="card savingsAccount" (click)="getSavingsAccountDetails()">
+      <div class="card savingsAccount" (click)="getSavingsAccountDetails()" [ngStyle]="{'opacity': savingsAccount ? 1 : 0.5}">
         <div class="d-flex flex-column">
           <div class="d-flex flex-row justify-content-between">
             <svg
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="card loanAccount" (click)="getLoanAccountDetails()">
+      <div class="card loanAccount" (click)="getLoanAccountDetails()" [ngStyle]="{'opacity':loanAccount ? 1 : 0.5}">
         <div class="d-flex flex-column">
           <div class="d-flex flex-row justify-content-between">
             <svg
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="card creditCard" (click)="getCreditCardDetails()">
+      <div class="card creditCard" (click)="getCreditCardDetails()" [ngStyle]="{'opacity':creditAccount ? 1 : 0.5}">
         <div class="d-flex flex-column">
           <div class="d-flex flex-row justify-content-between">
             <svg
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="card overDraftAccount" (click)="getODAccountDetails()">
+      <div class="card overDraftAccount" (click)="getODAccountDetails()" [ngStyle]="{'opacity': overdraftAccount ? 1 : 0.5}">
         <div class="d-flex flex-column">
           <div class="d-flex flex-row justify-content-between">
             <svg

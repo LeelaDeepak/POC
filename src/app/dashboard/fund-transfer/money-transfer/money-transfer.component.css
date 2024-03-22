@@ -1,0 +1,310 @@
+.bg-container{
+    width: 1230px;
+    height: 648px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    margin: 8px;
+    border: 1px solid #D1CFCF;
+    background: var(--Card-Tile-Text, #FFF);
+    margin-bottom: 40px;
+}
+.transferSummary{
+    width: 1230px;
+    height: 50px;
+    border: 1px solid #D1CFCF;
+    background: var(--Card-Header, #ECF3FF);
+}
+.summaryheading{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px;
+}
+.from{
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 30px;
+    padding-left: 50px;
+}
+.savingsAccNumber{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.balance{
+    color: #717171;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.savings{
+    padding: 20px;
+    padding-left: 110px;
+    
+}
+.selectPayee{
+    width: 288px;
+    height: 36px;
+    flex-shrink: 0;
+}
+.addPayee{
+    width: 140px;
+    height: 28px;
+    flex-shrink: 0;
+    color: #082341;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    border: 1px solid #082341;
+    background-color: #FFF;
+    margin: 5px;
+}
+.or{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+.to{
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* padding: 20px; */
+    padding-left:50px ;
+}
+.senderOption{
+    /* padding: 10px; */
+    padding-left: 160px;
+}
+.payee{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 5px;
+    line-height: normal;
+    padding: 5px;
+   
+}
+.accountNumberheading{
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    padding-left: 50px;
+}
+.accountNo{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 288px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+    margin-left: 44px;
+    padding-left: 5px;
+}
+.reEnterAccHeading{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    padding-left: 80px;
+    padding-top: 6px;
+}
+.reaccountNo{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 360px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+    margin-left: 15px;
+    padding-left: 5px;
+}
+.transaction{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 30px;
+}
+.amount{
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    padding-left: 50px;
+}
+.transferAmmount{
+    width: 288px;
+    height: 36px;
+    flex-shrink: 0;
+    color: #082341;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 2px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+    padding: 5px;
+    margin-left: 30px;
+}
+.remarks{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    padding-left: 80px;
+    padding-top: 6px;
+}
+.remarksInput{
+    width: 360px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #D2D2D2;
+    background: #FFF;
+    color: #8C8C8C;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+    padding: 5px;
+}
+.paymentMode{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 30px;
+}
+.selectPaymentHeading{
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    padding-left: 50px;
+}
+.impsMode{
+    width: 280px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #082341;
+    background: #FFF;
+    margin-left: 40px;
+}
+.instantTransfer{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+.imps{
+    color: #082341;
+    font-family: Mulish;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    padding-left: 10px;
+}
+.cancelBtn{
+    width: 100px;
+    height: 28px;
+    flex-shrink: 0;
+    border: 1px solid #082341;
+    color: #082341;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    margin: 10px;
+}
+.saveBtn{
+    width: 100px;
+    height: 28px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    background: #082341;
+    margin: 10px;
+    margin-left: 20px;
+
+}

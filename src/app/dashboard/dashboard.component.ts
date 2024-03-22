@@ -24,6 +24,13 @@ export class DashboardComponent {
   gotoAccountDashboard(){
     this.route.navigate(["/accountDashboard"])
   }
+
+  gotoTransferDashboard(){
+    this.route.navigate(["/transferDashboard"])
+  }
+  gotoPaymentDashboard(){
+    this.route.navigate(['/paymentDashboard'])
+  }
 }
 
 
