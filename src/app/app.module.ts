@@ -22,6 +22,7 @@ import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews
 import { TransfersComponent } from './dashboard/transfers/transfers/transfers.component';
 import { TransferAccountSummaryComponent } from './dashboard/transfers/transfer-account-summary/transfer-account-summary.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { TransferAccountSummaryComponent } from './dashboard/transfers/transfer-
     TabviewsComponent,
     TransfersComponent,
     TransferAccountSummaryComponent,
+    
     
   ],
   imports: [

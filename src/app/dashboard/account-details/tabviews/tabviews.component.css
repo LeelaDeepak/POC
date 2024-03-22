@@ -161,11 +161,12 @@
 }
 
 .eachRow {
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .lastRow {
-  border-bottom: 1px solid #d9d9da;
+  padding-top: 20px;
+  border-top: 1.5px solid #d6d6d6;
 }
 
 .tabPage {
@@ -232,6 +233,11 @@
   line-height: normal;
 }
 
+.commonselect:hover{
+  background:#082341 ;
+  color: #fff;
+}
+
 .paginationArea {
   width: 482px;
   height: 45px;
@@ -255,6 +261,7 @@
 
 .DownloadText {
   margin-top: 5px;
+  
 }
 
 .downloadBtn {
