@@ -6,8 +6,8 @@ import { ForgotInfoComponent } from './forgot-info/forgot-info.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
-import { TransfersComponent } from './dashboard/transfers/transfers/transfers.component';
-import { AccountDetailsComponent } from './dashboard/account-details/account-details.component';
+import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
+import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
 
 
 const routes: Routes = [
@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'forgot-info', component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
   {path:'accountDetails',component:AccountDashboardComponent},
-  {path:"transfers",component:TransfersComponent}
+  {path:"paymentDashboard",component:PaymentDashboardComponent},
+  {path:'transferDashboard',component:TransferDashboardComponent}
 ];
 
 @NgModule({

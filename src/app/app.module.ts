@@ -19,8 +19,11 @@ import { MultipleAccountsComponent } from './dashboard/account-details/multiple-
 import { AccountSummaryComponent } from './dashboard/account-details/account-summary/account-summary.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews.component';
-import { TransfersComponent } from './dashboard/transfers/transfers/transfers.component';
-import { TransferAccountSummaryComponent } from './dashboard/transfers/transfer-account-summary/transfer-account-summary.component';
+import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
+import { TransferAccountSummaryComponent } from './dashboard/fund-transfer/transfer-account-summary/transfer-account-summary.component';
+import { MoneyTransferComponent } from './dashboard/fund-transfer/money-transfer/money-transfer.component';
+import { SelectBillerComponent } from './dashboard/payments/select-biller/select-biller.component';
+import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
 
 
 @NgModule({
@@ -39,8 +42,11 @@ import { TransferAccountSummaryComponent } from './dashboard/transfers/transfer-
     AccountSummaryComponent,
     AccountDashboardComponent,
     TabviewsComponent,
-    TransfersComponent,
+    TransferDashboardComponent,
     TransferAccountSummaryComponent,
+    MoneyTransferComponent,
+    SelectBillerComponent,
+    PaymentDashboardComponent,
     
     
   ],

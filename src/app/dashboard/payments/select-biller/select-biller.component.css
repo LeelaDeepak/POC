@@ -1,0 +1,121 @@
+.card-header{
+    background: #ECF3FF !important;
+}
+body{
+    font-family: Mulish;
+ 
+}
+.select-biller{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    text-align: left;
+    color: #777777;
+    padding-right: 70px;
+ 
+}
+.cre-card{
+    border: 1px solid #D2D2D2;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: left;
+    color: #082341;
+    width: 288px;
+    height: 36px;
+    top: 270px;
+    left: 261px;
+    gap: 0px;
+    border-radius: 2px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+ 
+}
+.biller-details{
+    
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    text-align: left;
+    color: #082341;
+ 
+ 
+}
+ 
+.form-check-input:checked{
+    width: 20px;
+    height: 20px;
+    top: 402px;
+    left: 590px;
+    gap: 0px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    background-color:#082341 ;
+    border-color: #082341;
+}
+.account{
+    /* font-family: Mulish; */
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    text-align: right;
+    color:#777777;
+ 
+}
+.savings{
+    /* font-family: Mulish; */
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    text-align: left;
+    color: #082341;
+ 
+}
+.balance{
+    /* font-family: Mulish; */
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15.06px;
+    text-align: left;
+    color: #717171;
+ 
+}
+.cancelBtn{
+    width: 140px;
+    height: 28px;
+    top: 698px;
+    left: 575px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #082341;
+    color: #082341;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+}
+.payBtn{
+    width: 140px;
+    height: 28px;
+    top: 698px;
+    left: 725px;
+    gap: 0px;
+    opacity: 0px;
+    background: #082341;
+    color: white;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+ 
+}
