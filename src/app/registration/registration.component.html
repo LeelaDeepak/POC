@@ -82,16 +82,7 @@
 					<!-- <div *ngIf="registrationForm.errors.pattern">Invalid characters in the address</div> -->
 				</div>
 			</div>
-			<!-- <div class="form-group mt-3">
-				<label for="zipcode">Zipcode<span class="text-danger">*</span></label>
-				<input type="text" id="zipcode" class="form-control" formControlName="zipcode" placeholder="Zipcode">
-				<div *ngIf="registrationForm.get('zipcode')?.invalid && registrationForm.get('zipcode')?.touched" class="text-danger">
-					Zipcode is required.
-				</div>
-				<div *ngIf="registrationForm.get('zipcode')?.hasError('pattern') && registrationForm.get('zipcode')?.touched" class="text-danger">
-					Invalid zipcode.
-				</div>
-			</div> -->
+			
 			<div class="row mt-3">
 				<div class="col-md-6">
 					<div class="form-group">
@@ -120,7 +111,7 @@
 				</div>
 			</div>
 			<div class="d-grid gap-2 mt-3">
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Submit</button>
 			</div>
 			<div class="text-center mt-4">
 				<span >Already had an account <a aria-current="page" routerLink="/login">Login Here</a></span>
