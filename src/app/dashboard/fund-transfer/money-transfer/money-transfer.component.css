@@ -283,7 +283,7 @@
     border: 1px solid #082341;
     color: #082341;
     text-align: center;
-    font-family: Lato;
+    font-family: Mulish;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -298,7 +298,7 @@
     flex-shrink: 0;
     color: #FFF;
     text-align: center;
-    font-family: Lato;
+    font-family: Mulish;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -308,6 +308,7 @@
     background: #082341;
     margin: 10px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .error-msg{
     color: red;

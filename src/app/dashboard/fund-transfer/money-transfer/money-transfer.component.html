@@ -4,7 +4,7 @@
             <p class="summaryheading">Transfer Money to Anyone, Anywhere</p>
           </div>
           <div class="transferDetails">
-            <form (ngSubmit)="onSubmit()" [formGroup]="moneyTransferForm">
+            <form (ngSubmit)="onSubmit(moneyTransferForm.value)" [formGroup]="moneyTransferForm">
                 <div class="d-flex flex-column">
                     <div class="d-flex flex-row">
                         <label class="from">From</label>
@@ -32,7 +32,7 @@
                                 <label class="accountNumberheading">Account Number</label>
                                <input placeholder="Enter your Account Number" class="accountNo" formControlName="accountNumber">
                               <div *ngIf="moneyTransferForm.get('accountNumber')?.invalid && moneyTransferForm.get('accountNumber')?.touched" class="text-danger">
-                                <p class="error-msg"> Please Enter Account Number</p>
+                                <p class="error-msg">Please Enter Account Number</p>
                              </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
 
                 <div class="d-flex flex-row justify-content-center mt-3">
                     <button class="cancelBtn">cancel</button>
-                    <button class="saveBtn">Send</button>
+                    <button class="saveBtn" [disabled]="moneyTransferForm.invalid">Send</button>
                 </div>
             </form>
           </div>

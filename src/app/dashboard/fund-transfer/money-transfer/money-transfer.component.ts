@@ -12,14 +12,6 @@ export class MoneyTransferComponent {
   
   moneyTransferForm!:FormGroup;
   constructor(private service:RegisterService,private fb:FormBuilder){
-    // this.moneyTransferForm = new FormGroup({
-    //   "payee":new FormControl('',Validators.required),
-    //   "accountNumber":new FormControl('',Validators.required),
-    //   "reEnterAccountNo":new FormControl('',Validators.required),
-    //   "amount":new FormControl('',Validators.required),
-    //   "remarks":new FormControl('',Validators.required),
-    //   "paymentModeInput":new FormControl('',Validators.required)
-    // })
     this.moneyTransferForm = fb.group({
        "payee":["Select Payee",[Validators.required]],
        "accountNumber":['',Validators.required],
@@ -30,23 +22,15 @@ export class MoneyTransferComponent {
     })
    }
   newPayee = this.service.addpayee;
-  // payeeName = this.newPayee[0].fullname;
- 
-  
-  // onPayeeSelect(event:any){
-  //   this.payeeName = event.target.value;
-  //   console.log(event.target.value)
-  // }
 
-  onSubmit(){
-    // this.moneyTransferForm.value.payee = this.payeeName;
-    // if(this.moneyTransferForm.invalid){
-    //   alert("Please Enter all Fields")
-    // }
-    // else{
-    //   console.log(this.moneyTransferForm.value)
-    // }
-    console.log(this.moneyTransferForm.value)
+  onSubmit(value:any){
+     if(this.moneyTransferForm.invalid){
+        alert("Enter all fields");
+     }
+     else{
+      console.log(value)
+      this.moneyTransferForm.reset()
+     }
   }
 
 
