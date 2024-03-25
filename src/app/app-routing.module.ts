@@ -21,7 +21,8 @@ const routes: Routes = [
   {path:"accountDashboard",component:AccountDashboardComponent},
   {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
-  {path:'transferDashboard',component:TransferDashboardComponent}
+  {path:'transferDashboard',component:TransferDashboardComponent},
+  {path:'addpayee',component:AddpayeeComponent}
 ];
 
 @NgModule({
