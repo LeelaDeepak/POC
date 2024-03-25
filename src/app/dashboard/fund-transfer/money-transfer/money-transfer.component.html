@@ -16,12 +16,14 @@
                     <div class="d-flex flex-row">
                         <label class="to">To</label>
                        <div class="d-flex flex-row senderOption">
-                            <select class="selectPayee payee" formControlName="Payee">
-                                <option class="payee">Select Payee</option>
-                                <option class="payee">Dillep</option>
+                            <select class="selectPayee payee" formControlName="payee">
+                                <option *ngFor="let payee of newPayee" [value]="payee.fullname">{{payee.fullname}}</option>
                             </select>
+                            <div *ngIf="moneyTransferForm.get('payee')?.invalid && moneyTransferForm.get('payee')?.touched">
+                                <p class="error-msg">Please Select Payee</p>
+                            </div>
                             <p class="or">or</p>
-                            <button class="addPayee" routerLink="/addpayee">ADD PAYEE</button>
+                            <button class="addPayeeBtn" routerLink="/addpayee">ADD PAYEE</button>
                        </div>
                     </div>
                     <div class="row">

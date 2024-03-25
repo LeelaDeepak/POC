@@ -44,6 +44,15 @@ export class RegisterService {
     AvailableBalanceinRupees:"1,81,680/-"
   }
  
+  addpayee:any= [
+    {
+      fullname:"Select Payee"
+    },
+   {
+    fullname:"Dileep"
+   }
+
+ ]
   
 
 }

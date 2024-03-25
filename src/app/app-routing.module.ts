@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
 import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
+import { AddpayeeComponent } from './dashboard/fund-transfer/addpayee/addpayee.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path:'accountDetails',component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
   {path:'transferDashboard',component:TransferDashboardComponent},
-  
+  {path:'addpayee',component:AddpayeeComponent}
 ];
 
 @NgModule({
