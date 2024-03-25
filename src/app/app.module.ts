@@ -24,6 +24,9 @@ import { TransferAccountSummaryComponent } from './dashboard/fund-transfer/trans
 import { MoneyTransferComponent } from './dashboard/fund-transfer/money-transfer/money-transfer.component';
 import { SelectBillerComponent } from './dashboard/payments/select-biller/select-biller.component';
 import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
+import { RecentTransactionComponent } from './dashboard/account-details/tabviews/tabSections/recent-transaction/recent-transaction.component';
+import { TransactionHistoryComponent } from './dashboard/account-details/tabviews/tabSections/transaction-history/transaction-history.component';
+import { AccountStatementComponent } from './dashboard/account-details/tabviews/tabSections/account-statement/account-statement.component';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboar
     MoneyTransferComponent,
     SelectBillerComponent,
     PaymentDashboardComponent,
+    RecentTransactionComponent,
+    TransactionHistoryComponent,
+    AccountStatementComponent,
     
     
   ],

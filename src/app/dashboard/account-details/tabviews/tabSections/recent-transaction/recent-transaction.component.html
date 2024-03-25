@@ -1,0 +1,23 @@
+<table class="container-fluid">
+    <tr *ngFor="let eachData of RecentTrans">
+      <td class="data">
+        <img src="{{ eachData.symbol }}" alt="Symbol" class="eachArrow" />
+      </td>
+      <td class="eachName">
+        {{ eachData.name }}
+      </td>
+      <td class="eachDate">
+        {{ eachData.transDate }}
+      </td>
+      <td class="eachType">
+        {{ eachData.transtype }}
+      </td>
+      <td class="eachDesc">
+        {{ eachData.transDesc }}
+      </td>
+      <td class="eachAmountCredit">
+        {{ eachData.amountcredit }}
+      </td>
+      <td class="eachTotamount">{{ eachData.totAmount }}</td>
+    </tr>
+  </table>
