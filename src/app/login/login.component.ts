@@ -19,6 +19,7 @@ export class LoginComponent {
   uEmail: any;
   uPassword:any;
   userList: any;
+  isInvalidUser:boolean = false;
   constructor(private fb: FormBuilder,private router: Router,private modalService: NgbModal,
     private service:RegisterService) {}
   ngOnInit(): void {
@@ -58,7 +59,9 @@ export class LoginComponent {
   
     }else{
       alert('Invalid username or password');
+        this.isInvalidUser = !this.isInvalidUser;
         this.loginForm.reset();
+      
     }
    
   }

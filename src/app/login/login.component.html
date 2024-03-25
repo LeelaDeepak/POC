@@ -31,8 +31,17 @@
 						<button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
 					</div>
         </form>
-				
+
+		<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" *ngIf="isInvalidUser">
+			<div>
+			  <div class="toast-body">
+				Hello, world! This is a toast message.
+			  </div>
+			  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
+		  </div>
+				
+	</div>
 		<div class="col-md-6">
 		<img [src]="imagePath" [width]="imageWidth" [height]="imageHeight" alt="Description">
 
@@ -42,5 +51,6 @@
 	<ng-template #copyContent let-modal>
 		<app-forgot-info></app-forgot-info>
 	</ng-template>
+	
 	
   

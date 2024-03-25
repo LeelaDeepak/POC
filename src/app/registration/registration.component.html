@@ -32,22 +32,25 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6"><div class="form-group mt-3">
-					<label for="phoneNumber">Phone Number<span class="text-danger">*</span></label>
-					<input type="text" id="phoneNumber" class="form-control" formControlName="phoneNumber" placeholder="PhoneNumber">
-					<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.get('phoneNumber')?.touched" class="text-danger">
-						Phone number is required.
-					</div>
-					<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
-						Invalid phone number.
-					</div>
-				</div></div>
+				<div class="col-md-6">
+					<div class="form-group mt-3">
+						<label for="phoneNumber">Phone Number<span class="text-danger">*</span></label>
+						<input type="text" id="phoneNumber" class="form-control" formControlName="phoneNumber" placeholder="PhoneNumber">
+						<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.get('phoneNumber')?.touched" class="text-danger">
+							Phone number is required.
+						</div>
+						<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
+							Invalid phone number.
+						</div>
+				    </div>
+			    </div>
 				<div class="col-md-6">
 					<div class="form-group mt-3">
 						<label for="dob">Date of Birth<span class="text-danger">*</span></label>
 						<input type="date" id="dob" class="form-control" formControlName="dob" bsDatepicker placeholder="Date of Birth">
 						<div *ngIf="registrationForm.get('dob')?.invalid && registrationForm.get('dob')?.touched"
-								 class="text-danger">Date of Birth is required</div>
+								 class="text-danger">Date of Birth is required
+						</div>
 					</div>
 				</div>
 			</div>
