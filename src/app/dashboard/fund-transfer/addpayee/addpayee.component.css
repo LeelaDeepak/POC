@@ -121,4 +121,10 @@
     letter-spacing: 0.12px;
     text-transform: uppercase;
   }
+
+  .error-msg{
+    color: red;
+    font-weight: bold;
+   
+}
   
