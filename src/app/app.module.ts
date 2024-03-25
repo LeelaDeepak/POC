@@ -27,6 +27,8 @@ import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboar
 import { RecentTransactionComponent } from './dashboard/account-details/tabviews/tabSections/recent-transaction/recent-transaction.component';
 import { TransactionHistoryComponent } from './dashboard/account-details/tabviews/tabSections/transaction-history/transaction-history.component';
 import { AccountStatementComponent } from './dashboard/account-details/tabviews/tabSections/account-statement/account-statement.component';
+import { AddpayeeComponent } from './dashboard/fund-transfer/addpayee/addpayee.component';
+import { PaymentSuccessfullComponent } from './dashboard/fund-transfer/payment-successfull/payment-successfull.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { AccountStatementComponent } from './dashboard/account-details/tabviews/
     RecentTransactionComponent,
     TransactionHistoryComponent,
     AccountStatementComponent,
+    AddpayeeComponent,
+    PaymentSuccessfullComponent,
     
     
   ],

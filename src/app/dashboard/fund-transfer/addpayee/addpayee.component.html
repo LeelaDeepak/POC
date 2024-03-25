@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<app-account-holder-details></app-account-holder-details>
+<section class="container-fluid">
+    <form [formGroup]="addPayeeForm">
+    <div class="row d-flex justify-content-start mt-4 ms-4">
+        <div class="col-lg-6">
+            <div class="eachBlock mb-4">
+                <label class="payeeLabel mt-1">Payee Full Name</label>
+                <input type="text" class="inputField" formControlName="fullname">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="eachBlock mb-4">
+                <label class="payeeLabel mt-1">Payee Nickname</label>
+                <input type="text" class="inputField" formControlName="nickname">
+            </div>
+        </div>
+    </div>
+    <p class="ms-3 Det">Account Details</p>
+    <div class="row d-flex justify-content-start mt-4 ms-4">
+        <div class="eachBlock mb-4">
+            <label class="payeeLabel mt-1">Select Bank</label>
+            <select
+                class="form-select form-control inputField accountDetField"
+                name="bank"
+                id="bank"
+                (change)="onSelectBank($event)"
+              >
+                <option
+                  *ngFor="let bank of banks"
+                  [value]="bank"
+                >
+                  {{ bank }}
+                </option>
+              </select>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+                <label class="form-check-label branch" for="flexCheckChecked">
+                  Same Branch
+                </label>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-start ms-4">
+        <div class="col-lg-6">
+            <div class="eachBlock mb-4">
+                <label class="payeeLabel mt-1">Account Number</label>
+                <input type="number" class="inputField" formControlName="accountNo">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="eachBlock mb-4">
+                <label class="payeeLabel mt-1 reEnter">Re-Enter Account Number</label>
+                <input type="number" class="inputField" formControlName="reEnteraccountNo">
+            </div>
+        </div>
+    </div>
+    <p class="ms-3 Det">Note</p>
+    <div class="pt-2 ps-4">
+        <ol>
+            <li class="eachNote p-1">As per the RBI circular dated Oct 14, 2010, transfer of funds through electronic mode will be executed only on the basis of the account number of the beneficiary provided while initiating the transaction, name will not be considered as a criteria for providing credit. Kindly ensure that you enter the correct beneficiary account number.</li>
+            <li class="eachNote p-1">A maximum of 10 Payees can be added in one day.</li>
+            <li class="eachNote p-1">Waiting period post Payee addition is 30 minutes.</li>
+            <li class="eachNote p-1">Ensure that the Payee Account Number entered by you is correct.</li>
+            <li class="eachNote p-1">ICICI Bank does not take any responsibility and shall not be liable for claims on incorrect details entered.</li>
+        </ol>
+    </div>
+    <div class="payeeBtns">
+        <button class="cancelBtn" (click)="cancelSubmit()">cancel</button>
+        <button class="addBtn" (click)="submitPayee()">add</button>
+    </div>
+    </form>
+</section>

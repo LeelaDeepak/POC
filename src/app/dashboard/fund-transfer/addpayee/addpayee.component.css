@@ -1,0 +1,124 @@
+.eachBlock {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .payeeLabel {
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .inputField {
+    width: 288px;
+    height: 36px;
+    flex-shrink: 0;
+    padding-left: 10px;
+    border-radius: 2px;
+    color: #082341;
+  
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 1px solid #d2d2d2;
+  }
+  
+  .Det {
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .accountDetField {
+    margin-left: 36px;
+  }
+  
+  .branch {
+    color: #000;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: 0.14px;
+  }
+  
+  .form-check-input:checked {
+    background-image: url("/assets/tick.svg");
+  }
+  
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  
+  .reEnter {
+    color: #082341;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+  }
+  
+  .eachNote {
+    color: #777;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 175% */
+    letter-spacing: 0.32px;
+  }
+  
+  .payeeBtns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cancelBtn {
+    width: 100px;
+    height: 28px;
+    flex-shrink: 0;
+    border: 1px solid #082341;
+    background: #fff;
+    color: #082341;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+  }
+  
+  .addBtn {
+    background: #082341;
+    width: 100px;
+    height: 28px;
+    flex-shrink: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+  }
+  
