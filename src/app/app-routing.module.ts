@@ -8,19 +8,23 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
 import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
+import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews.component';
+import { TransactionHistoryComponent } from './dashboard/account-details/tabviews/tabSections/transaction-history/transaction-history.component';
 
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
-  {path:'login', component:LoginComponent},
-  {path:'forgot-info', component:ForgotInfoComponent},
-  {path:'registration', component:RegistrationComponent},
-  {path:'dashboard', component:DashboardComponent},
-  { path: 'forgot-info', component: ForgotInfoComponent, canActivate: [AuthGuard] },
+  {path:"login", component:LoginComponent},
+  {path:"forgot-info", component:ForgotInfoComponent},
+  {path:"registration", component:RegistrationComponent},
+  {path:"dashboard", component:DashboardComponent},
+  { path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
-  {path:'accountDetails',component:AccountDashboardComponent},
+  {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
-  {path:'transferDashboard',component:TransferDashboardComponent}
+  {path:"transferDashboard",component:TransferDashboardComponent},
+  {path: "tabviews", component:TabviewsComponent},
+  {path: "transaction-history", component:TransactionHistoryComponent},
 ];
 
 @NgModule({
