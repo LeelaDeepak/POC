@@ -1,9 +1,13 @@
 .card-header{
     background: #ECF3FF !important;
+    color: #082341;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 body{
     font-family: Mulish;
- 
 }
 .select-biller{
     font-size: 16px;

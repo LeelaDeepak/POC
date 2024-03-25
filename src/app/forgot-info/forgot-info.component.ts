@@ -47,7 +47,12 @@ export class ForgotInfoComponent {
         console.log(userIndex+1);
         this.service.userData[userIndex+1] = this.myForm.value.password;
         console.log('Password Changed Successfully!!');
+        console.log(this.myForm.value.password)
         this.closePopup();
+        
+      }
+      else{
+         alert("Invalid Email")
       }
     }
     openPopup() {

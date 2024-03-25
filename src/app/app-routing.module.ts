@@ -8,8 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
 import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
-import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews.component';
-import { TransactionHistoryComponent } from './dashboard/account-details/tabviews/tabSections/transaction-history/transaction-history.component';
+import { AddpayeeComponent } from './dashboard/fund-transfer/addpayee/addpayee.component';
 
 
 const routes: Routes = [
@@ -22,9 +21,7 @@ const routes: Routes = [
   {path:"accountDashboard",component:AccountDashboardComponent},
   {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
-  {path:"transferDashboard",component:TransferDashboardComponent},
-  {path: "tabviews", component:TabviewsComponent},
-  {path: "transaction-history", component:TransactionHistoryComponent},
+  {path:'transferDashboard',component:TransferDashboardComponent}
 ];
 
 @NgModule({
