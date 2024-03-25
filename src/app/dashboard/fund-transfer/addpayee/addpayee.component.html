@@ -7,7 +7,7 @@
             <div class="eachBlock mb-4">
                 <label class="payeeLabel mt-1">Payee Full Name</label>
                 <input type="text" class="inputField" formControlName="fullname">
-                <div *ngIf="addPayeeForm.get('fullname')?.invalid && addPayeeForm.get('fullname')?.touched" class="text-danger">
+                <div *ngIf="addPayeeForm.get('fullname')?.touched" class="text-danger">
                     <p class="error-msg"> Please Enter Fullname</p>
                 </div>
             </div>
@@ -16,7 +16,7 @@
             <div class="eachBlock mb-4">
                 <label class="payeeLabel mt-1">Payee Nickname</label>
                 <input type="text" class="inputField" formControlName="nickname">
-                <div *ngIf="addPayeeForm.get('nickname')?.invalid && addPayeeForm.get('nickname')?.touched" class="text-danger">
+                <div *ngIf="addPayeeForm.get('nickname')?.touched" class="text-danger">
                     <p class="error-msg"> Please Enter Nickname</p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="eachBlock mb-4">
                 <label class="payeeLabel mt-1">Account Number</label>
                 <input type="number" class="inputField" formControlName="accountNo">
-                <div *ngIf="addPayeeForm.get('accountNo')?.invalid && addPayeeForm.get('accountNo')?.touched" class="text-danger">
+                <div *ngIf="addPayeeForm.get('accountNo')?.touched" class="text-danger">
                     <p class="error-msg"> Please Enter Account No</p>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="eachBlock mb-4">
                 <label class="payeeLabel mt-1 reEnter">Re-Enter Account Number</label>
                 <input type="number" class="inputField" formControlName="reEnteraccountNo">
-                <div *ngIf="addPayeeForm.get('reEnteraccountNo')?.invalid && addPayeeForm.get('reEnteraccountNo')?.touched" class="text-danger">
+                <div *ngIf="addPayeeForm.get('reEnteraccountNo')?.touched" class="text-danger">
                     <p class="error-msg"> Please ReEnter Account No</p>
                 </div>
             </div>
