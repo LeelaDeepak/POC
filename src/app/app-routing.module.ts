@@ -13,16 +13,15 @@ import { AddpayeeComponent } from './dashboard/fund-transfer/addpayee/addpayee.c
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
-  {path:'login', component:LoginComponent},
-  {path:'forgot-info', component:ForgotInfoComponent},
-  {path:'registration', component:RegistrationComponent},
-  {path:'dashboard', component:DashboardComponent},
-  { path: 'forgot-info', component: ForgotInfoComponent, canActivate: [AuthGuard] },
+  {path:"login", component:LoginComponent},
+  {path:"forgot-info", component:ForgotInfoComponent},
+  {path:"registration", component:RegistrationComponent},
+  {path:"dashboard", component:DashboardComponent},
+  { path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
-  {path:'accountDetails',component:AccountDashboardComponent},
+  {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
-  {path:'transferDashboard',component:TransferDashboardComponent},
-  {path:'addpayee',component:AddpayeeComponent}
+  {path:'transferDashboard',component:TransferDashboardComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account-details',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './account-details.component.css'
 })
 export class AccountDetailsComponent {
+ constructor(private router: Router){}
+
+  getTransction(){
+    // this.router.navigateByUrl('/transaction-history')
+
+  }
 
 }
