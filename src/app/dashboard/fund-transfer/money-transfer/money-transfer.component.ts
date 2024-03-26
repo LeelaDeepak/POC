@@ -31,8 +31,9 @@ export class MoneyTransferComponent {
      }
      else{
       console.log(value)
-      this.route.navigate(['/transferSuccess'])
+      this.route.navigate(['/paymentsuccess'])
       this.moneyTransferForm.reset()
+      
      }
      
   }
