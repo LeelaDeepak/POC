@@ -46,7 +46,7 @@ export class LoginComponent {
     if(this.service.userData.includes(this.formControls['email'].value)&& this.service.userData.includes(this.formControls['password'].value)){
       alert('Login successful!');
      
-        const user = { username: this.formControls['email'].value}; 
+        const user = this.formControls['email'].value; 
         console.log(user)
          this.service.setCurrentUser(user);
         var newStr = this.formControls['email'].value.replace(/@.*$/,"");
