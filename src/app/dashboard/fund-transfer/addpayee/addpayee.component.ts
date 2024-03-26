@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RegisterService } from '../../../register.service';
 
 @Component({
@@ -12,12 +12,14 @@ export class AddpayeeComponent {
   constructor(private service:RegisterService){}
 
   addPayeeForm = new FormGroup({
-    fullname: new FormControl(),
-    nickname: new FormControl(),
-    bank: new FormControl(),
-    accountNo: new FormControl(),
-    reEnteraccountNo: new FormControl(),
+    fullname: new FormControl('',Validators.required),
+    nickname: new FormControl('',Validators.required),
+    bank: new FormControl('',Validators.required),
+    accountNo: new FormControl('',Validators.required),
+    reEnteraccountNo: new FormControl('',Validators.required),
   });
+
+  
 
   banks = ['Hdfc', 'Axis', 'SBI', 'ICICI', 'StandardChart'];
   selectedBank = this.banks[0];
