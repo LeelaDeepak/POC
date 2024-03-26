@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './account-dashboard.component.css'
 })
 export class AccountDashboardComponent {
-
-  
-
+  isloaded=false;
+ 
+  ngOnInit(){
+    setInterval(()=>{
+      this.isloaded=true;
+    },1000);
+   
+  }
 }

@@ -14,8 +14,13 @@ export class DashboardComponent {
     balance: 1000
   };
   username:any;
+  isloaded=false;
+
   ngOnInit(){
     this.username = this.service.trimmedString
+    setInterval(()=>{
+      this.isloaded=true;
+    },1000);
   }
   constructor(private service:RegisterService,private route:Router) { }
   // get currentUser() {
