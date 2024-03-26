@@ -26,6 +26,7 @@ export class MoneyTransferComponent {
   onSubmit(value:any){
      if(this.moneyTransferForm.invalid){
         alert("Enter all fields");
+        console.log("Enter all filelds")
      }
      else{
       console.log(value)

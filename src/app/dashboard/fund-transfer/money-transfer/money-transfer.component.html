@@ -19,9 +19,6 @@
                             <select class="selectPayee payee" formControlName="payee">
                                 <option *ngFor="let payee of newPayee" [value]="payee.fullname">{{payee.fullname}}</option>
                             </select>
-                            <div *ngIf="moneyTransferForm.get('payee')?.invalid && moneyTransferForm.get('payee')?.touched">
-                                <p class="error-msg">Please Select Payee</p>
-                            </div>
                             <p class="or">or</p>
                             <button class="addPayeeBtn" routerLink="/addpayee">ADD PAYEE</button>
                        </div>
@@ -105,7 +102,7 @@
 
                 <div class="d-flex flex-row justify-content-center mt-3">
                     <button class="cancelBtn">cancel</button>
-                    <button class="saveBtn" [disabled]="moneyTransferForm.invalid">Send</button>
+                    <button type="submit" class="saveBtn">Send</button>
                 </div>
             </form>
           </div>
