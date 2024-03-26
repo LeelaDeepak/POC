@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
   {path:'transferDashboard',component:TransferDashboardComponent},
-  {path:'addpayee',component:AddpayeeComponent}
+  {path:'addpayee',component:AddpayeeComponent},
 ];
 
 @NgModule({

@@ -52,7 +52,10 @@ export class RegisterService {
     fullname:"Dileep"
    }
 
- ]
+ ];
+
+ isTransactionHistory=false;
+ isAccountStatement=false;
   
 
 }
