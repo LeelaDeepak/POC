@@ -75,7 +75,14 @@
     border: 1px solid #D1CFCF;
     background: var(--Card-Tile-Text, #FFF);
 }
-.form-switch .form-check-input {
-    /* border-radius: 20px; */
+/* .form-switch .form-check-input {
+
+    background-color: #DA22FF;
+} */
+.checkbox{
+    width: 40px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 20px;
     background-color: #DA22FF;
 }

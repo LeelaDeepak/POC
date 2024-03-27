@@ -23,9 +23,7 @@ export class AccountSummaryComponent{
   }
   
 
-  showData(){
-    this.isDisplay = !this.isDisplay
-  }
+ 
 
 
 }

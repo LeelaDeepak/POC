@@ -9,7 +9,7 @@ import { RegisterService } from '../../../register.service';
 export class MultipleAccountsComponent {
 
   accountShow:boolean = false;
-  savingsAccount:boolean = false
+  savingsAccount:boolean = true
   loanAccount:boolean = false;
   creditAccount:boolean = false;
   overdraftAccount:boolean = false;
