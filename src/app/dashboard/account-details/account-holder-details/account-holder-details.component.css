@@ -78,3 +78,6 @@
     text-transform: capitalize;
     cursor: pointer;
 }
+/* .breadcrumb li::after{
+    content: " > ";
+} */

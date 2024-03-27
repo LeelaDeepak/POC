@@ -9,9 +9,14 @@ import { RegisterService } from '../../../register.service';
 export class AccountHolderDetailsComponent {
   constructor(private service:RegisterService){}
   userName: string=""
+  breadCrumbPath:any[] = []
+
   ngOnInit(){
     this.userName = this.service.trimmedString
     console.log(this.userName)
+    this.breadCrumbPath = this.service.breadCrumb
+    console.log(this.breadCrumbPath)
   }
+ 
 
 }

@@ -20,7 +20,6 @@ const routes: Routes = [
   {path:"dashboard", component:DashboardComponent},
   { path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
-  {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
   {path:'transferDashboard',component:TransferDashboardComponent},
   {path:'addpayee',component:AddpayeeComponent},
