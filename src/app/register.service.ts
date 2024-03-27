@@ -37,12 +37,13 @@ export class RegisterService {
   }
   
   accountObj={
-    AccountHolder:"Thotakura Dileep",
+    // AccountHolder:this.trimmedString,
     AccountType:"Savings Account",
     AccountNumber:"1234567890111213",
     AccountBranch:"KPHB",
     AvailableBalanceinRupees:"1,81,680/-"
   }
+
  
   addpayee:any= [
     {
