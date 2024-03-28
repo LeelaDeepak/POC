@@ -10,7 +10,7 @@
                         <label class="from">From</label>
                        <div class="d-flex flex-column savings">
                             <p class="savingsAccNumber">Savings - 12345678910111213</p>
-                            <p class="balance">Balance - $ 1,81,633.90/-</p>
+                            <p class="balance">Balance - {{availBalance}}/-</p>
                        </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -27,7 +27,7 @@
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="accountNumberheading">Account Number</label>
-                                <input type="text" placeholder="Enter Account Number" class="accountNo" formControlName="accountNumber">
+                                <input type="text" placeholder="Enter Account Number" class="accountNo" formControlName="accountNumber" required>
                                 <div *ngIf="moneyTransferForm.get('accountNumber')?.invalid && moneyTransferForm.get('accountNumber')?.touched" class="text-danger">
                                     <p class="error-msg">Please Enter Account Number</p>
                                 </div>
@@ -36,7 +36,7 @@
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="reEnterAccHeading">Re- Enter Account Number</label>
-                                <input type="text" class="reaccountNo" placeholder="Enter Account Number" formControlName="reEnterAccountNo">
+                                <input type="text" class="reaccountNo" placeholder="Enter Account Number" formControlName="reEnterAccountNo" required>
                                 <div *ngIf="moneyTransferForm.get('reEnterAccountNo')?.invalid && moneyTransferForm.get('reEnterAccountNo')?.touched" class="text-danger">
                                        <p class="error-msg"> Please Enter Account Number</p>
                                 </div>
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="amount">Enter the Amount</label>
-                                <input placeholder="Enter Amount" class="transferAmmount" formControlName="amount">
+                                <input placeholder="Enter Amount" class="transferAmmount" formControlName="amount" required>
                             </div>
                             <div *ngIf="moneyTransferForm.get('amount')?.invalid && moneyTransferForm.get('amount')?.touched">
                                 <p class="error-msg">Please Enter Amount</p>
@@ -64,7 +64,7 @@
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="remarks">Remarks for transaction</label>
-                                <input placeholder="Please write here" class="remarksInput" formControlName="remarks">
+                                <input placeholder="Please write here" class="remarksInput" formControlName="remarks" required>
                             </div>
                             <div *ngIf="moneyTransferForm.get('remarks')?.invalid && moneyTransferForm.get('remarks')?.touched">
                                 <p class="error-msg">Please Enter Remarks</p>
@@ -82,7 +82,7 @@
                                 <input type="radio" name="paymentModeInput" class="form-check-input" formControlName="paymentModeInput" value="IMPS">
                                  <label class="imps">IMPS</label>
                             </div>
-                            <p class="instantTransfer pt-3">Max Rs. 5 Lakh per day. Instant transfer 24*7
+                            <p class="instantTransfer pt-3">Max Rs. 50,000 Lakh per day. Instant transfer 24*7
                                 transferable</p>
                         </div>
                         <div class="d-flex flex-column impsMode p-2 ps-3">
@@ -90,7 +90,7 @@
                                 <input type="radio" name="paymentModeInput" class="form-check-input" formControlName="paymentModeInput" value="NEFT">
                                  <label class="imps">NEFT</label>
                             </div>
-                            <p class="instantTransfer pt-3">Max Rs. 10 Lakh per day. Receiver gets money in
+                            <p class="instantTransfer pt-3">Max Rs. 1,00,000 Lakh per day. Receiver gets money in
                                 2 to 24 Hrs</p>
                         </div>
                         <div class="d-flex flex-column impsMode p-2 ps-3">
@@ -98,7 +98,7 @@
                                 <input type="radio" name="paymentModeInput" class="form-check-input" formControlName="paymentModeInput" value="RTGS">
                                  <label class="imps">RTGS</label>
                             </div>
-                            <p class="instantTransfer pt-3">Min Rs. 2 Lakh, Max Rs. 10 Lakh per day. Real time
+                            <p class="instantTransfer pt-3">Min Rs. 75,000 Lakh, Max Rs. 10 Lakh per day. Real time
                                 transaction.</p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
 
                 <div class="d-flex flex-row justify-content-center mt-3">
                     <button class="cancelBtn">cancel</button>
-                    <button type="submit" class="saveBtn">Send</button>
+                    <button type="submit" class="btn btn-primary sendBtn" [disabled]="moneyTransferForm.invalid">Send</button>
                 </div>
             </form>
           </div>

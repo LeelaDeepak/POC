@@ -37,6 +37,7 @@ export class MoneyTransferComponent {
   accountNo = this.service.accountNo;
   reEnterAccountNo = this.service.reEnteraccountNo;
   totalAmount:number = 0;
+  availBalance:number = this.service.balance
 
   calculateTotalAmount(){
     let mytotal=0;
@@ -55,7 +56,7 @@ export class MoneyTransferComponent {
         console.log("Enter all filelds")
      }
      else if(this.moneyTransferForm.value.amount > this.service.balance){
-        alert("Insufficient Balance and Please Enter amount less than 5000/-")
+        alert("Insufficient Funds")
      }
      else if(this.moneyTransferForm.value.amount > this.amountlimit){
         alert("Exceeded Limit")

@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"forgot-info", component:ForgotInfoComponent},
   {path:"registration", component:RegistrationComponent},
   {path:"dashboard", component:DashboardComponent},
-  { path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
+  {path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
   {path:'transferDashboard',component:TransferDashboardComponent},
