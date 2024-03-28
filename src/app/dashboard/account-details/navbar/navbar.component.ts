@@ -26,4 +26,5 @@ export class NavbarComponent {
     this.service.breadCrumb.push("Transfer")
 
   }
+
 }
