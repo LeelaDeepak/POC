@@ -8,9 +8,11 @@ import { RegisterService } from '../../../register.service';
 })
 export class TransferAccountSummaryComponent {
   accountUserName:any =[]
+  accbalance:number=0;
   constructor(private service:RegisterService){}
   ngOnInit(){
     this.accountUserName.push(this.service.trimmedString)
+    this.accbalance =  this.service.balance;
   }
 
 }

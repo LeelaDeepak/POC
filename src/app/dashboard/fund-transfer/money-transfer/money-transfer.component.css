@@ -1,6 +1,4 @@
 .bg-container{
-    width: 1230px;
-    height: 648px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
     margin: 8px;
@@ -9,8 +7,6 @@
     margin-bottom: 40px;
 }
 .transferSummary{
-    width: 1230px;
-    height: 50px;
     border: 1px solid #D1CFCF;
     background: var(--Card-Header, #ECF3FF);
 }
@@ -316,3 +312,14 @@
     padding-left: 223px;
     padding-top: 5px;
 }
+.form-check-input:not(:checked) {
+    background-color: #fff;
+    border: 2px solid #1b154c;
+    cursor: pointer;
+  }
+.form-check-input:checked {
+    cursor: pointer;
+    border-radius: 100px;
+    border: 5px solid var(--Brand-Primary-Colors-Evoke-Blue-Evoke-Blue, #1B154C);
+    background: var(--Primary-White, #FFF);
+  }

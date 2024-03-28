@@ -60,5 +60,12 @@ export class RegisterService {
  accountNo:any;
  reEnteraccountNo:any;
  breadCrumb:any[] = ["Account Details"]
+ balance:number = 10000;
+ 
+ paymentHistory:number[] = []; 
+
+ 
+
+  
 
 }
