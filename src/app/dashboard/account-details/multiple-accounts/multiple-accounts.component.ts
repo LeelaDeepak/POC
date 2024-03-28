@@ -13,9 +13,13 @@ export class MultipleAccountsComponent {
   loanAccount:boolean = false;
   creditAccount:boolean = false;
   overdraftAccount:boolean = false;
+  accountUserName:any = [];
 
   constructor(private service:RegisterService){}
-
+    ngOnInit(){
+    this.accountUserName.push(this.service.trimmedString)
+      
+    }
   getSavingsAccountDetails(){
     this.savingsAccount = !this.savingsAccount;
     this.loanAccount = false;

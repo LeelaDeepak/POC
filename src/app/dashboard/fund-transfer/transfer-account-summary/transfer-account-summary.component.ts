@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegisterService } from '../../../register.service';
 
 @Component({
   selector: 'app-transfer-account-summary',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './transfer-account-summary.component.css'
 })
 export class TransferAccountSummaryComponent {
+  accountUserName:any =[]
+  constructor(private service:RegisterService){}
+  ngOnInit(){
+    this.accountUserName.push(this.service.trimmedString)
+  }
 
 }
