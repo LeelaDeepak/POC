@@ -46,17 +46,19 @@ export class RegisterService {
 
  
   addpayee:any= [
-    {
-      fullname:"Select Payee"
-    },
-   {
-    fullname:"Dileep"
-   }
+      {
+        fullname:"Select Payee"
+      },
+      {
+        fullname:"Dileep"
+      }
 
  ];
 
  isTransactionHistory=false;
  isAccountStatement=false;
+ accountNo:any;
+ reEnteraccountNo:any;
  breadCrumb:any[] = ["Account Details"]
 
 }

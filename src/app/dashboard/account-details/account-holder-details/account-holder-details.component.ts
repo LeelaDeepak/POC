@@ -13,9 +13,8 @@ export class AccountHolderDetailsComponent {
 
   ngOnInit(){
     this.userName = this.service.trimmedString
-    console.log(this.userName)
     this.breadCrumbPath = this.service.breadCrumb
-    console.log(this.breadCrumbPath)
+   
   }
  
 

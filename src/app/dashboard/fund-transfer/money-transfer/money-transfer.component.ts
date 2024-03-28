@@ -16,13 +16,17 @@ export class MoneyTransferComponent {
     this.moneyTransferForm = fb.group({
        "payee":["Select Payee",[Validators.required]],
        "accountNumber":['',Validators.required],
-      "reEnterAccountNo":['',Validators.required],
-      "amount":['',Validators.required],
-      "remarks":['',Validators.required],
-      "paymentModeInput":['',Validators.required]
+       "reEnterAccountNo":['',Validators.required],
+       "amount":['',Validators.required],
+       "remarks":['',Validators.required],
+       "paymentModeInput":['',Validators.required]
     })
    }
+
+  
   newPayee = this.service.addpayee;
+  accountNo = this.service.accountNo;
+  reEnterAccountNo = this.service.reEnteraccountNo;
 
   onSubmit(value:any){
      if(this.moneyTransferForm.invalid){
@@ -33,8 +37,7 @@ export class MoneyTransferComponent {
       console.log(value)
       this.route.navigate(['/paymentsuccess'])
       this.moneyTransferForm.reset()
-      
-     }
+    }
      
   }
 

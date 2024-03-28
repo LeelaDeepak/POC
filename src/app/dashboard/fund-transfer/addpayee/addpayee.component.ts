@@ -41,8 +41,12 @@ export class AddpayeeComponent {
             alert('Payee Added Successfully!!');
             console.log(this.addPayeeForm.value)
             this.service.addpayee.push(this.addPayeeForm.value);
-            this.addPayeeForm.reset()
+            this.service.accountNo = this.service.addpayee[2].accountNo;
+            this.service.reEnteraccountNo = this.service.addpayee[2].reEnteraccountNo;
+            console.log(this.service.accountNo);
+            console.log(this.service.reEnteraccountNo);
             console.log(this.service.addpayee)
+            this.addPayeeForm.reset()
             this.route.navigate(['/transferDashboard'])
           } 
           else {

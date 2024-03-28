@@ -14,7 +14,6 @@ export class NavbarComponent {
   accountDetails(){
     this.service.breadCrumb.pop()
     this.service.breadCrumb.push("Account Details")
-    console.log(this.service.breadCrumb)
   }
 
   paymentsClick(){

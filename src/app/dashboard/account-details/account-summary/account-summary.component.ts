@@ -16,9 +16,9 @@ export class AccountSummaryComponent{
 
   ngOnInit(){
     this.loanAccountSummary.push(this.service.accountObj);
-    console.log(this.loanAccountSummary)
+    // console.log(this.loanAccountSummary)
     this.accountUserName.push(this.service.trimmedString)
-    console.log(this.accountUserName)
+    // console.log(this.accountUserName)
 
   }
   

@@ -131,10 +131,9 @@
     line-height: normal;
     width: 288px;
     height: 36px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     border-radius: 2px;
     border: 1px solid #D2D2D2;
-    background: #FFF;
     margin-left: 44px;
     padding-left: 5px;
 }
