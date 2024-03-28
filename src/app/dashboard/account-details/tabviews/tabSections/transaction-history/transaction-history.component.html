@@ -5,8 +5,7 @@
         type="radio"
         name="flexRadioDefault"
         id="flexRadioDefault1"
-        [disabled]="isDisableByPeriodfield"
-        (click)="disableDateField()"
+        checked
       />
       <label class="form-check-label" for="flexRadioDefault1">
         Transaction Date
@@ -18,9 +17,9 @@
         <input
           class="form-control Field"
           type="date"
-          [disabled]="isDisableByPeriodfield"
           [(ngModel)]="fromTransDate"
-          max="{{ minRangeDate | date : 'yyyy-MM-dd' }}"
+          name="fromTransDate"
+          (click)="showWithDate()"
         />
       </div>
       <div class="d-flex ToDate">
@@ -28,11 +27,10 @@
         <input
           class="form-control Field"
           type="date"
-          [disabled]="isDisableByPeriodfield"
           [(ngModel)]="toTransDate"
+          name="toTransDate"
+          (click)="showWithDate()"
           max="{{ todayDate | date : 'yyyy-MM-dd' }}"
-          min="{{ minRangeDate | date : 'yyyy-MM-dd' }}"
-          (click)="arrangeToDate()"
         />
       </div>
     </div>
@@ -44,8 +42,7 @@
         type="radio"
         name="flexRadioDefault"
         id="flexRadioDefault2"
-        [disabled]="isDisablebyDatefield"
-        (click)="disablePeriodField()"
+        (click)="showWithPeriod()"
       />
       <label class="form-check-label" for="flexRadioDefault2">
         Transaction Period
@@ -57,7 +54,6 @@
         class="form-select Field"
         name="duration"
         id="duration"
-        [disabled]="isDisablebyDatefield"
         (change)="onSelectPeriodicDays($event)"
       >
         <option *ngFor="let eachday of periodicDays" [value]="eachday">

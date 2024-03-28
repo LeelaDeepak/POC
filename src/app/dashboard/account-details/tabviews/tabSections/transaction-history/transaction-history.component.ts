@@ -692,11 +692,8 @@ export class TransactionHistoryComponent {
   toTransDate = '';
   showMode = '';
   showData = false;
-  sevenPeriodicDays = '7';
-  fourteenPeriodicDays = '14';
-  minRangeDate = new Date();
   todayDate = Date();
-
+  showflag="";
   periodicDays = ['Last 7 Days', 'Last 14 Days'];
   selectedperidocday = this.periodicDays[0];
 
@@ -706,43 +703,46 @@ export class TransactionHistoryComponent {
     console.log(this.selectedperidocday);
   }
 
-  arrangeToDate() {
-    this.minRangeDate = new Date(this.fromTransDate);
+  
+
+  
+
+  showWithDate(){
+    this.showflag = "Show With Date";
   }
 
-  disableDateField() {
-    this.isDisablebyDatefield = true;
-    this.isDisableByPeriodfield = false;
-    this.showMode = 'ShowbyDate';
-  }
-
-  disablePeriodField() {
-    this.isDisableByPeriodfield = true;
-    this.isDisablebyDatefield = false;
-    this.showMode = 'ShowbyPeriod';
+  showWithPeriod(){
+    this.showflag = "Show With Period";
   }
 
   cancelField() {
-    this.isDisablebyDatefield = false;
-    this.isDisableByPeriodfield = false;
     this.showData = false;
   }
 
   submitField() {
-    if (this.showMode == 'ShowbyDate') {
-      if (this.fromTransDate != '' && this.toTransDate != '') {
-        this.showData = true;
-      } else {
-        alert('Enter The Dates');
-      }
-    } else if (
-      this.showMode == 'ShowbyPeriod' &&
-      this.selectedperidocday != ''
-    ) {
+    if(this.showflag=="Show With Date" && this.fromTransDate!=""&& this. toTransDate!=""){
+      alert("Downloaded Statement from "+this.fromTransDate+" to "+this. toTransDate);
       this.showData = true;
-    } else {
-      alert('Please Choose The Options and Select Date or Period');
+    }else if(this.showflag=="Show With Period" && this.selectedperidocday!=""){
+      this.showData = true;
+      alert("Downloaded Statement of "+this.selectedperidocday);
+    }else{
+      alert("Choose Option and Select The Fields To Download");
     }
+    // if (this.showMode == 'ShowbyDate') {
+    //   if (this.fromTransDate != '' && this.toTransDate != '') {
+    //     this.showData = true;
+    //   } else {
+    //     alert('Enter The Dates');
+    //   }
+    // } else if (
+    //   this.showMode == 'ShowbyPeriod' &&
+    //   this.selectedperidocday != ''
+    // ) {
+    //   this.showData = true;
+    // } else {
+    //   alert('Please Choose The Options and Select Date or Period');
+    // }
   }
 
 

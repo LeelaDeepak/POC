@@ -6,29 +6,22 @@ import { Component } from '@angular/core';
   styleUrl: './account-statement.component.css'
 })
 export class AccountStatementComponent {
-  isDisableByDateStatement=false;
-  isDisableByPeriodStatement=false;
+  
   fromStatementDate='';
   toStatementDate='';
-  minStatementRangeDate = new Date();
   showStatementmode="";
   todayDate = Date();
+  showflag="";
 
-  arangeStatementDate(){
-    this.minStatementRangeDate = new Date(this.fromStatementDate);
+  showWithDate(){
+    this.showflag = "Show With Date";
   }
 
-  disablestatementbyDate(){
-    this.isDisableByDateStatement=true;
-    this.isDisableByPeriodStatement=false;
-    this.showStatementmode = 'Show Statement By Date';
+  showWithPeriod(){
+    this.showflag = "Show With Period";
   }
 
-  disablestatementbyPeriod(){
-    this.isDisableByPeriodStatement=true;
-    this.isDisableByDateStatement=false;
-    this.showStatementmode = 'Show Statement By Period';
-  }
+  
 
   statementPeriod=[
     "Last 7 Days","Last 14 Days"
@@ -59,22 +52,16 @@ export class AccountStatementComponent {
 
 
   submitStatement(){
-    if(this.showStatementmode=="Show Statement By Date"&&this.selectedStatementFromat!=""){
-      if(this.fromStatementDate!="" && this.toStatementDate!=""){
-        alert("Downloaded Statement from "+this.fromStatementDate+" to "+this.toStatementDate+" in "+this.selectedStatementFromat+"Format");
-      }else{
-        alert("Please Select Option and Choose dates")
-      }
-    }else if(this.showStatementmode=="Show Statement By Period"&&this.selectedStatementFromat!=""){
+    if(this.showflag=="Show With Date" && this.fromStatementDate!=""&& this.toStatementDate!=""&&this.selectedStatementFromat!=""){
+      alert("Downloaded Statement from "+this.fromStatementDate+" to "+this.toStatementDate+" in "+this.selectedStatementFromat+"Format");
+    }else if(this.showflag=="Show With Period" && this.selectedStatementFromat!=""){
       alert("Downloaded Statement of "+this.selectStatementPeriod+" in "+this.selectedStatementFromat+"Format");
     }else{
-      alert("Choose Option and Select The Fields To Download")
+      alert("Choose Option and Select The Fields To Download");
     }
   }
 
   cancelStatement(){
-    this.isDisableByDateStatement=false;
-    this.isDisableByPeriodStatement=false;
     this.selectedStatementFromat="";
   }
 

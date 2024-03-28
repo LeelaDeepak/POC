@@ -3,7 +3,6 @@
     <div class="mt-2 mb-4">
       <div
         class="d-flex mt-4 justify-content-center"
-        (click)="disablestatementbyDate()"
       >
         <div class="form-check transfield">
           <input
@@ -11,7 +10,8 @@
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault3"
-            [disabled]="isDisableByPeriodStatement"
+            checked
+            
           />
           <label class="form-check-label" for="flexRadioDefault3">
             Transaction Date
@@ -23,9 +23,9 @@
             <input
               class="form-control Field"
               type="date"
-              [disabled]="isDisableByPeriodStatement"
               [(ngModel)]="fromStatementDate"
               name="fromStatementDate"
+              (click)="showWithDate()"
             />
           </div>
           <div class="d-flex ToDate">
@@ -33,12 +33,10 @@
             <input
               class="form-control Field"
               type="date"
-              [disabled]="isDisableByPeriodStatement"
               [(ngModel)]="toStatementDate"
-              (click)="arangeStatementDate()"
-              min="{{ minStatementRangeDate | date : 'yyyy-MM-dd' }}"
               name="toStatementDate"
               max="{{ todayDate | date : 'yyyy-MM-dd' }}"
+              (click)="showWithDate()"
             />
           </div>
         </div>
@@ -50,8 +48,8 @@
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault4"
-            [disabled]="isDisableByDateStatement"
-            (click)="disablestatementbyPeriod()"
+            
+            (click)="showWithPeriod()"
           />
           <label class="form-check-label" for="flexRadioDefault4">
             Transaction Period
@@ -63,7 +61,7 @@
             class="form-select Field"
             name="duration"
             id="duration"
-            [disabled]="isDisableByDateStatement"
+            
             (change)="onSelectStatementPeriod($event)"
           >
             <option
