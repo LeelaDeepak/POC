@@ -12,16 +12,18 @@ export class AccountSummaryComponent{
 
   isDisplay:boolean = false;
   loanAccountSummary:any = [];
+  accountUserName:any = [];
 
   ngOnInit(){
     this.loanAccountSummary.push(this.service.accountObj);
-    console.log(this.loanAccountSummary)
+    // console.log(this.loanAccountSummary)
+    this.accountUserName.push(this.service.trimmedString)
+    // console.log(this.accountUserName)
+
   }
   
 
-  showData(){
-    this.isDisplay = !this.isDisplay
-  }
+ 
 
 
 }

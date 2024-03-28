@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from '../../../register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-money-transfer',
@@ -11,17 +12,21 @@ export class MoneyTransferComponent {
 
   
   moneyTransferForm!:FormGroup;
-  constructor(private service:RegisterService,private fb:FormBuilder){
+  constructor(private service:RegisterService,private fb:FormBuilder,private route:Router){
     this.moneyTransferForm = fb.group({
        "payee":["Select Payee",[Validators.required]],
        "accountNumber":['',Validators.required],
-      "reEnterAccountNo":['',Validators.required],
-      "amount":['',Validators.required],
-      "remarks":['',Validators.required],
-      "paymentModeInput":['',Validators.required]
+       "reEnterAccountNo":['',Validators.required],
+       "amount":['',Validators.required],
+       "remarks":['',Validators.required],
+       "paymentModeInput":['',Validators.required]
     })
    }
+
+  
   newPayee = this.service.addpayee;
+  accountNo = this.service.accountNo;
+  reEnterAccountNo = this.service.reEnteraccountNo;
 
   onSubmit(value:any){
      if(this.moneyTransferForm.invalid){
@@ -30,8 +35,10 @@ export class MoneyTransferComponent {
      }
      else{
       console.log(value)
+      this.route.navigate(['/paymentsuccess'])
       this.moneyTransferForm.reset()
-     }
+    }
+     
   }
 
 

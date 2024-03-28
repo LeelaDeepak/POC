@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RegisterService } from '../../../register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addpayee',
@@ -9,7 +10,7 @@ import { RegisterService } from '../../../register.service';
 })
 export class AddpayeeComponent {
 
-  constructor(private service:RegisterService){}
+  constructor(private service:RegisterService, private route:Router){}
 
   addPayeeForm = new FormGroup({
     fullname: new FormControl('',Validators.required),
@@ -40,8 +41,13 @@ export class AddpayeeComponent {
             alert('Payee Added Successfully!!');
             console.log(this.addPayeeForm.value)
             this.service.addpayee.push(this.addPayeeForm.value);
-            this.addPayeeForm.reset()
+            this.service.accountNo = this.service.addpayee[2].accountNo;
+            this.service.reEnteraccountNo = this.service.addpayee[2].reEnteraccountNo;
+            console.log(this.service.accountNo);
+            console.log(this.service.reEnteraccountNo);
             console.log(this.service.addpayee)
+            this.addPayeeForm.reset()
+            this.route.navigate(['/transferDashboard'])
           } 
           else {
             alert('Account No Mismatched');

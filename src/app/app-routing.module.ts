@@ -9,6 +9,7 @@ import { AccountDashboardComponent } from './dashboard/account-details/account-d
 import { TransferDashboardComponent } from './dashboard/fund-transfer/transfer-dashboard/transfer-dashboard.component';
 import { PaymentDashboardComponent } from './dashboard/payments/payment-dashboard/payment-dashboard.component';
 import { AddpayeeComponent } from './dashboard/fund-transfer/addpayee/addpayee.component';
+import { PaymentSuccessfullComponent } from './dashboard/fund-transfer/payment-successfull/payment-successfull.component';
 
 
 const routes: Routes = [
@@ -19,10 +20,10 @@ const routes: Routes = [
   {path:"dashboard", component:DashboardComponent},
   { path: "forgot-info", component: ForgotInfoComponent, canActivate: [AuthGuard] },
   {path:"accountDashboard",component:AccountDashboardComponent},
-  {path:"accountDetails",component:AccountDashboardComponent},
   {path:"paymentDashboard",component:PaymentDashboardComponent},
   {path:'transferDashboard',component:TransferDashboardComponent},
   {path:'addpayee',component:AddpayeeComponent},
+  {path:'paymentsuccess',component:PaymentSuccessfullComponent}
 ];
 
 @NgModule({

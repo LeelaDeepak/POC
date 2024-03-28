@@ -27,16 +27,16 @@
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="accountNumberheading">Account Number</label>
-                               <input placeholder="Enter your Account Number" class="accountNo" formControlName="accountNumber">
-                              <div *ngIf="moneyTransferForm.get('accountNumber')?.invalid && moneyTransferForm.get('accountNumber')?.touched" class="text-danger">
-                                <p class="error-msg">Please Enter Account Number</p>
-                             </div>
+                                <input type="text" placeholder="Enter Account Number" class="accountNo" formControlName="accountNumber" value="12345678">
+                                <div *ngIf="moneyTransferForm.get('accountNumber')?.invalid && moneyTransferForm.get('accountNumber')?.touched" class="text-danger">
+                                    <p class="error-msg">Please Enter Account Number</p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mt-3">
                                 <label class="reEnterAccHeading">Re- Enter Account Number</label>
-                                <input placeholder="Enter your Account Number" class="reaccountNo" formControlName="reEnterAccountNo">
+                                <input type="text" class="reaccountNo" placeholder="Enter Account Number" formControlName="reEnterAccountNo" value="123456789">
                                 <div *ngIf="moneyTransferForm.get('reEnterAccountNo')?.invalid && moneyTransferForm.get('reEnterAccountNo')?.touched" class="text-danger">
                                        <p class="error-msg"> Please Enter Account Number</p>
                                 </div>

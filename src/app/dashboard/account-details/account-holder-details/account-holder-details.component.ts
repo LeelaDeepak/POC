@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegisterService } from '../../../register.service';
 
 @Component({
   selector: 'app-account-holder-details',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./account-holder-details.component.css']
 })
 export class AccountHolderDetailsComponent {
+  constructor(private service:RegisterService){}
+  userName: string=""
+  breadCrumbPath:any[] = []
+
+  ngOnInit(){
+    this.userName = this.service.trimmedString
+    this.breadCrumbPath = this.service.breadCrumb
+   
+  }
+ 
 
 }
